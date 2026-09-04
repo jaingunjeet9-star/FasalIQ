@@ -1,4 +1,6 @@
 import app from "./app";
+
+export default app;
 import { logger } from "./lib/logger";
 
 const rawPort = process.env["PORT"];
