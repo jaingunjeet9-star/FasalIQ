@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "FasalIQ"
+description = "A polished SIH-2026 Agri-Tech demo for Indian farmers, combining farm intelligence, deterministic crop economics, AI-style advice, crop screening, organic planning, and profile-matched schemes in one mobile-first experience."
+version = "1.0.0"
+id = "artifacts/fasaliq"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 20799
+
+[services.development]
+run = "pnpm --filter @workspace/fasaliq run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/fasaliq", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/fasaliq/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "20799"
+BASE_PATH = "/"

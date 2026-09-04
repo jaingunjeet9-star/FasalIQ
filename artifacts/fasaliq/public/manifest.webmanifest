@@ -1,0 +1,17 @@
+{
+  "name": "FasalIQ",
+  "short_name": "FasalIQ",
+  "description": "AI-powered decision intelligence for modern farming",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fffdf7",
+  "theme_color": "#174b35",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "180x180",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

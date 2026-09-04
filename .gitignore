@@ -1,49 +1,95 @@
-# See https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
+# ============================================================================
+# FasalIQ — Comprehensive .gitignore
+# ============================================================================
 
-# compiled output
-dist
-tmp
-out-tsc
+# ============================================================================
+# ENVIRONMENT & SECRETS — NEVER COMMIT THESE
+# ============================================================================
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+service-account*.json
+*-service-account*.json
+*credentials*.json
+*secret*.json
+
+# ============================================================================
+# COMPILED / BUILD OUTPUT
+# ============================================================================
+dist/
+build/
+out/
+out-tsc/
+tmp/
+.next/
 *.tsbuildinfo
-.expo
-.expo-shared
 
-# dependencies
-node_modules
+# ============================================================================
+# DEPENDENCIES
+# ============================================================================
+node_modules/
 
-# IDEs and editors
-/.idea
+# ============================================================================
+# LOGS
+# ============================================================================
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+testem.log
+
+# ============================================================================
+# IDE & EDITOR FILES
+# ============================================================================
+/.idea/
 .project
 .classpath
 .c9/
 *.launch
 .settings/
 *.sublime-workspace
-
-# IDE - VSCode
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+.cursor/
 
-# misc
-/.sass-cache
-/connect.lock
-/coverage
-/libpeerconnection.log
-npm-debug.log
-yarn-error.log
-testem.log
-/typings
+# ============================================================================
+# REPLIT / AGENT WORKSPACE — NOT NEEDED FOR GITHUB
+# ============================================================================
+.replit
+.replitignore
+replit.md
+.agents/
+.conversation/
 
-# System Files
+# ============================================================================
+# OS-SPECIFIC FILES
+# ============================================================================
 .DS_Store
 Thumbs.db
+Desktop.ini
 
-.cursor/rules/nx-rules.mdc
-.github/instructions/nx.instructions.md
-
-# Replit
+# ============================================================================
+# CACHE & TEMP FILES
+# ============================================================================
 .cache/
 .local/
+/.sass-cache/
+/connect.lock/
+/coverage/
+/libpeerconnection.log
+/typings/
+
+# ============================================================================
+# MISC — NOT FOR PUBLIC REPO
+# ============================================================================
+.cursor/rules/nx-rules.mdc
+.github/instructions/nx.instructions.md
