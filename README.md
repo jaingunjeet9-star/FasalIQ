@@ -367,10 +367,7 @@ architecture.
 
 Depending on the configured deployment:
 
--   AI/Vision API
--   Weather API
--   Market data/API
--   Agricultural/scheme information
+-   gemini API
 
 ### Development
 
@@ -381,149 +378,6 @@ Depending on the configured deployment:
 
 > **Important:** API providers and model names should be configured
 > through environment variables rather than hardcoded in source code.
-
-------------------------------------------------------------------------
-
-# 🔐 Security
-
-FasalIQ should never expose API credentials in the source code.
-
-Use environment variables:
-
-``` env
-GEMINI_API_KEY=your_api_key_here
-```
-
-Add secrets to `.gitignore`:
-
-``` gitignore
-.env
-.env.*
-!.env.example
-```
-
-Commit only a safe example configuration:
-
-``` env
-GEMINI_API_KEY=
-```
-
-### Never commit:
-
--   API keys
--   passwords
--   tokens
--   private credentials
--   production secrets
-
-------------------------------------------------------------------------
-
-# 📁 Suggested Project Structure
-
-The exact structure may vary depending on the current implementation.
-
-``` text
-FasalIQ/
-│
-├── src/
-│   ├── components/
-│   ├── pages/
-│   ├── services/
-│   ├── hooks/
-│   ├── utils/
-│   └── ...
-│
-├── public/
-│
-├── .env.example
-├── .gitignore
-├── package.json
-├── README.md
-└── ...
-```
-
-------------------------------------------------------------------------
-
-# 🚀 Getting Started
-
-## 1. Clone the repository
-
-``` bash
-git clone YOUR_GITHUB_REPOSITORY_URL
-cd FasalIQ
-```
-
-## 2. Install dependencies
-
-``` bash
-npm install
-```
-
-## 3. Configure environment variables
-
-Create a `.env` file.
-
-Example:
-
-``` env
-GEMINI_API_KEY=your_api_key_here
-```
-
-Add any additional API variables required by your deployment.
-
-**Never commit `.env` to GitHub.**
-
-## 4. Start development server
-
-``` bash
-npm run dev
-```
-
-Open the local development URL shown in the terminal.
-
-------------------------------------------------------------------------
-
-# 🧪 Testing Checklist
-
-Before deployment or hackathon submission, verify:
-
-### Crop Scanner
-
--   [ ] Upload a clear Wheat image
--   [ ] Upload a Mustard image
--   [ ] Upload a Rice image
--   [ ] Upload a Tomato image
--   [ ] Upload a Potato image
--   [ ] Upload a Maize image
--   [ ] Test a healthy crop
--   [ ] Test an affected crop
--   [ ] Test a non-crop image
--   [ ] Test a blurry image
--   [ ] Verify different images do not always return the same crop
--   [ ] Verify old scan results disappear when a new image is uploaded
-
-### AI Advisor
-
--   [ ] Basic question works
--   [ ] Conversation context works
--   [ ] Farmer profile context works
--   [ ] English response works
--   [ ] Hindi response works
--   [ ] Hinglish response works
--   [ ] API errors are handled gracefully
-
-### Application
-
--   [ ] Dashboard works
--   [ ] Weather works
--   [ ] Market works
--   [ ] Farm Economics works
--   [ ] Crop Comparison works
--   [ ] Organic Transition works
--   [ ] Scheme Finder works
--   [ ] Login/Sign Up works
--   [ ] Language switching works
--   [ ] Production build succeeds
 
 ------------------------------------------------------------------------
 
@@ -656,41 +510,6 @@ The long-term vision is:
 
 ------------------------------------------------------------------------
 
-# ⚠️ Responsible AI
-
-FasalIQ provides AI-assisted recommendations and should not be treated
-as an unquestionable authority.
-
-AI-generated information may contain errors.
-
-For important decisions involving:
-
--   pesticides
--   fertilizers
--   crop disease treatment
--   major financial investments
--   government eligibility
-
-users should verify recommendations with qualified agricultural
-professionals, official government information, product labels, or
-trusted local agricultural institutions.
-
-The system should clearly distinguish between:
-
-**Verified data**
-
-**AI-generated estimates**
-
-**Visual observations**
-
-**Predictions**
-
-and
-
-**Recommendations**
-
-------------------------------------------------------------------------
-
 # 🏆 Hackathon Vision
 
 FasalIQ is built around a simple hackathon proposition:
@@ -716,39 +535,6 @@ experience.
                    ↓
                 ACTION
 ```
-
-------------------------------------------------------------------------
-
-# 👥 Team
-
-**Project:** FasalIQ\
-**Category:** AI / AgriTech / Decision Intelligence\
-**Built for:** Hackathon / Smart India Hackathon ecosystem
-
-Add your team members here:
-
-``` text
-Team Member 1 — Role
-Team Member 2 — Role
-Team Member 3 — Role
-Team Member 4 — Role
-Team Member 5 — Role
-Team Member 6 — Role
-```
-
-------------------------------------------------------------------------
-
-# 📄 License
-
-Add the appropriate license for your project before public distribution.
-
-For example:
-
-``` text
-MIT License
-```
-
-if your team chooses to release the project under MIT.
 
 ------------------------------------------------------------------------
 
